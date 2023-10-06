@@ -14,7 +14,13 @@ public class AccountService {
     }
     
     public Account addAccount(Account account) {
-        return accountDAO.insertAccount(account);
+        if(account.getUsername() == "") {
+            return null;
+        } else if (account.getPassword().length() < 4) {
+            return null;
+        } else {
+            return accountDAO.insertAccount(account);
+        } 
     }
 
     public Account getAccountWhenLogin(String username, String password) {
