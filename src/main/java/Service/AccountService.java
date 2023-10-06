@@ -23,7 +23,7 @@ public class AccountService {
         } 
     }
 
-    public Account getAccountWhenLogin(String username, String password) {
-        return accountDAO.getAccountLogin(username, password);
+    public Account getAccountWhenLogin(Account account) {
+        return accountDAO.getAccountLogin(account);
     }
 }
