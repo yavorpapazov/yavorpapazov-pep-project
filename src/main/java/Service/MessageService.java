@@ -43,4 +43,8 @@ public class MessageService {
         }
         return null;
     }
+
+    public List<Message> getAllMessagesByUser(int posted_by) {
+        return messageDAO.getAllMessagesByUser(posted_by);
+    }
 }
